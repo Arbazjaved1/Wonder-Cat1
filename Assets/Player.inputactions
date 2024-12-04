@@ -1,0 +1,62 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "1031afe1-c70f-4c0a-ad30-7ada5e032f0d",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "be8151de-6184-4841-b6df-a99a9863ef51",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "a8ebd1d3-2586-4707-aa2f-9860159fe931",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Jump",
+            "id": "fa155e70-7f73-41fb-87a8-1def88ccb140",
+            "actions": [
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "17d35588-c883-4457-adf8-87883b335721",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cb0937a1-eec7-40a2-b710-ef2f56789115",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

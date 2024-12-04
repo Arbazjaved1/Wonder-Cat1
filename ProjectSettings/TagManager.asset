@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pickup
+  - Grounded
+  - Ground
+  - Chest
+  - Audio
+  - Platform
+  - Enemy
+  - Obstacle
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - enemy
+  - Water
+  - UI
+  - Player
+  - Ground
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: bg
+    uniqueID: 1004044603
+    locked: 0
+  - name: saw
+    uniqueID: 2957895085
+    locked: 0
+  - name: water
+    uniqueID: 520635175
+    locked: 0
+  - name: mac
+    uniqueID: 3655128473
+    locked: 0
+  - name: ground
+    uniqueID: 3836650643
+    locked: 0
+  - name: chest
+    uniqueID: 938225867
+    locked: 0
+  - name: player
+    uniqueID: 1138073799
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: enemy
+    uniqueID: 1739550739
+    locked: 0
