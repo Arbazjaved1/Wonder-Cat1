@@ -49,17 +49,32 @@ TagManager:
   - name: bg
     uniqueID: 1004044603
     locked: 0
+  - name: Bail
+    uniqueID: 1306028781
+    locked: 0
+  - name: chain
+    uniqueID: 2079741387
+    locked: 0
+  - name: circle
+    uniqueID: 2468301573
+    locked: 0
+  - name: swing
+    uniqueID: 791505133
+    locked: 0
+  - name: Coins
+    uniqueID: 3626599479
+    locked: 0
   - name: saw
     uniqueID: 2957895085
-    locked: 0
-  - name: water
-    uniqueID: 520635175
     locked: 0
   - name: mac
     uniqueID: 3655128473
     locked: 0
   - name: ground
     uniqueID: 3836650643
+    locked: 0
+  - name: water
+    uniqueID: 520635175
     locked: 0
   - name: chest
     uniqueID: 938225867
