@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Cat : MonoBehaviour
 {
@@ -20,7 +21,6 @@ public class Cat : MonoBehaviour
     private AudioManager audiomanager;
 
     public InputActionReference moveactiontouse;
-    public LevelManager levelManager;
 
     public int count;
     public TextMeshProUGUI countText;
@@ -30,13 +30,22 @@ public class Cat : MonoBehaviour
 
     private bool jumpheld = false;
 
+    public int totalCoins; // Total coins collected across all scenes (persistent)
+    public int currentSceneCoins; // Coins collected in the current scene
     // Start is called before the first frame update
     void Start()
     {
         audiomanager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-        count = 0;
-        setcountText();
-        startlevel();
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+
+        // Load total coins from PlayerPrefs (persistent storage)
+        totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+
+        // Initialize current scene coins to zero
+        currentSceneCoins = 0;
+
+        UpdateCountUI();
     }
 
     // Update is called once per frame
@@ -85,12 +94,17 @@ public class Cat : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        // Reference Rigidbody and Animator
-        rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-    }
+    //private void Awake()
+    //{
+    //    rb = GetComponent<Rigidbody2D>();
+    //    anim = GetComponent<Animator>();
+
+    //    audiomanager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
+
+    //    // Dynamically load saved coins at the beginning of every scene
+    //    currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+    //    UpdateCountUI();
+    //}
 
     private void FixedUpdate()
     {
@@ -138,30 +152,56 @@ public class Cat : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Pickup"))
+        if (other.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
-            audiomanager.PlaySFX(audiomanager.coins);
-            count = count + 1;
-            setcountText();
+
+            audiomanager?.PlaySFX(audiomanager.coins);
+
+            // Increment current scene coins and total coins
+            currentSceneCoins++;
+            totalCoins++;
+
+            // Save total coins persistently
+            PlayerPrefs.SetInt("TotalCoins", totalCoins);
+            PlayerPrefs.Save();
+
+            UpdateCountUI();
         }
     }
 
-    public void setcountText()
+    private void UpdateCountUI()
     {
-        countText.text = "  " + count.ToString();
+        // Update the UI with total coins
+        countText.text = $" {totalCoins}";
+    }
+    public void ResetSceneCoins()
+    {
+        // Subtract current scene coins from total coins
+        totalCoins -= currentSceneCoins;
+
+        // Save updated total coins persistently
+        PlayerPrefs.SetInt("TotalCoins", totalCoins);
+        PlayerPrefs.Save();
+
+        // Reset current scene coins
+        currentSceneCoins = 0;
+
+        Debug.Log("Coins reset to zero for the current scene.");
+        UpdateCountUI();
+    }
+    public void RetryButton()
+    {
+        ResetSceneCoins(); // Reset coins for the current scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
     }
 
-    public void startlevel()
-    {
-        count = 0;
-        count = SaveSystem.Load("Pickup", 0);
-        setcountText();
-    }
+    //public void startlevel()
+    //{
+    //    count = 0;
+    //    count = SaveSystem.Load("Pickup", 0);
+    //    setcountText();
+    //}
 
-    public void AddCoins(int amount)
-    {
-        count += amount;
-        setcountText();
-    }
 }

@@ -31,7 +31,7 @@ public class Health : MonoBehaviour
         if (isDead) return;
 
         isDead = true;
-        FindObjectOfType<UIManager>().GameOver();
+        //FindObjectOfType<UIManager>().GameOver();
         // Handle other death-related logic, e.g., animations, disabling player control, etc.
     }
 

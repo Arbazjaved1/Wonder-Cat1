@@ -25,6 +25,7 @@ public class Nextprivious : MonoBehaviour
             currentpage++;
             targetpos += pagestep;
             MovePage();
+            Time.timeScale = 1f;
         }
     }
     public void Privious()
@@ -34,6 +35,7 @@ public class Nextprivious : MonoBehaviour
             currentpage--;
             targetpos -= pagestep;
             MovePage();
+            Time.timeScale = 1f;
         }
     }
     void MovePage()

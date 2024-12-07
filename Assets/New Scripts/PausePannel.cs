@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -33,20 +33,18 @@ public class PausePannel : MonoBehaviour
     public async void Resume()
     {
        await PausepannelOutro();
-        pausepannel.SetActive(false);
+       pausepannel.SetActive(false);
         Time.timeScale = 1f;
     }
     public void QuitGame()
     {
-        Application.Quit();
+        FindAnyObjectByType<Cat>().ResetSceneCoins();
+        SceneManager.LoadScene("MainMenu 1");
     }
     public void RetryButton()
     {
-        int y = SceneManager.GetActiveScene().buildIndex;
-        //print(y);
-        SceneManager.LoadScene(y + 0);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
-        //int level = SaveSystem.Load("currentlevel", 0);
     }
     void Pausepannelintro()
     {

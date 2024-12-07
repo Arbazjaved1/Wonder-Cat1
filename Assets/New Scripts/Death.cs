@@ -41,7 +41,7 @@ public class Death : MonoBehaviour
                 if (anim != null)
                 {
                     anim.SetTrigger("Die");  // Play the death animation
-                    FindObjectOfType<UIManager>().GameOver();
+                    //FindObjectOfType<UIManager>().GameOver();
                     audiomanager.PlaySFX(audiomanager.death);
                 }
                 else
