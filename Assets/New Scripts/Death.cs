@@ -7,16 +7,17 @@ public class Death : MonoBehaviour
     private Animator anim;
     private AudioManager audiomanager;
 
-    // Start is called before the first frame update
+    // References to UI panels
+    public GameObject gameplayPanel;
+    public GameObject gameOverPanel;
+
     void Start()
     {
         audiomanager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        // Ensure initial states of the panels
+        if (gameplayPanel != null) gameplayPanel.SetActive(true);
+        if (gameOverPanel != null) gameOverPanel.SetActive(false);
     }
 
     private void Awake()
@@ -41,7 +42,6 @@ public class Death : MonoBehaviour
                 if (anim != null)
                 {
                     anim.SetTrigger("Die");  // Play the death animation
-                    //FindObjectOfType<UIManager>().GameOver();
                     audiomanager.PlaySFX(audiomanager.death);
                 }
                 else
@@ -60,12 +60,28 @@ public class Death : MonoBehaviour
                 {
                     if (script != this)
                     {
-                        script.enabled = false;  // Disable all
+                        script.enabled = false;  // Disable all scripts except this one
                     }
                 }
 
                 playerHealth.TakeDamage(playerHealth.maxHealth); // Apply fatal damage
+
+                // Show GameOver panel and hide Gameplay panel
+                ShowGameOverPanel();
             }
+        }
+    }
+
+    private void ShowGameOverPanel()
+    {
+        if (gameplayPanel != null && gameOverPanel != null)
+        {
+            gameplayPanel.SetActive(false); // Hide Gameplay panel
+            gameOverPanel.SetActive(true);  // Show GameOver panel
+        }
+        else
+        {
+            Debug.LogError("GameOverPanel or GameplayPanel is not assigned!");
         }
     }
 }
