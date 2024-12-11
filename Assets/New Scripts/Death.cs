@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Death : MonoBehaviour
 {
@@ -83,5 +84,10 @@ public class Death : MonoBehaviour
         {
             Debug.LogError("GameOverPanel or GameplayPanel is not assigned!");
         }
+    }
+    public void GoToMainMenu()
+    {
+        FindAnyObjectByType<Cat>().ResetSceneCoins();
+        SceneManager.LoadScene("MainMenu 1"); // Replace "MainMenu" with the exact name of your main menu scene
     }
 }

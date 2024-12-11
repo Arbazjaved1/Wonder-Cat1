@@ -70,14 +70,14 @@ TagManager:
   - name: mac
     uniqueID: 3655128473
     locked: 0
+  - name: chest
+    uniqueID: 938225867
+    locked: 0
   - name: ground
     uniqueID: 3836650643
     locked: 0
   - name: water
     uniqueID: 520635175
-    locked: 0
-  - name: chest
-    uniqueID: 938225867
     locked: 0
   - name: player
     uniqueID: 1138073799
