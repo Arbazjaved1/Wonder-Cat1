@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
-using UnityEngine.UI;
-using System;
 using UnityEngine.SceneManagement;
 
 public class Cat : MonoBehaviour
@@ -31,7 +29,8 @@ public class Cat : MonoBehaviour
     private bool jumpheld = false;
 
     public int totalCoins; // Total coins collected across all scenes (persistent)
-    public int currentSceneCoins; // Coins collected in the current scene
+    private int currentSceneCoins; // Coins collected in the current session (not saved until level completion)
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +41,7 @@ public class Cat : MonoBehaviour
         // Load total coins from PlayerPrefs (persistent storage)
         totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
 
-        // Initialize current scene coins to zero
+        // Initialize current scene coins to zero for this session
         currentSceneCoins = 0;
 
         UpdateCountUI();
@@ -57,7 +56,6 @@ public class Cat : MonoBehaviour
         // Flip player when moving left-right
         if (movedirection.x > 0.01f)
         {
-            // Preserve original y and z scales
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
         else if (movedirection.x < -0.01f)
@@ -93,18 +91,6 @@ public class Cat : MonoBehaviour
             grounded = false;
         }
     }
-
-    //private void Awake()
-    //{
-    //    rb = GetComponent<Rigidbody2D>();
-    //    anim = GetComponent<Animator>();
-
-    //    audiomanager = GameObject.FindGameObjectWithTag("Audio")?.GetComponent<AudioManager>();
-
-    //    // Dynamically load saved coins at the beginning of every scene
-    //    currentCoins = PlayerPrefs.GetInt("TotalCoins", 0);
-    //    UpdateCountUI();
-    //}
 
     private void FixedUpdate()
     {
@@ -158,13 +144,8 @@ public class Cat : MonoBehaviour
 
             audiomanager?.PlaySFX(audiomanager.coins);
 
-            // Increment current scene coins and total coins
+            // Increment current scene coins (but not saved yet)
             currentSceneCoins++;
-            totalCoins++;
-
-            // Save total coins persistently
-            PlayerPrefs.SetInt("TotalCoins", totalCoins);
-            PlayerPrefs.Save();
 
             UpdateCountUI();
         }
@@ -173,35 +154,29 @@ public class Cat : MonoBehaviour
     private void UpdateCountUI()
     {
         // Update the UI with total coins
-        countText.text = $" {totalCoins}";
+        countText.text = $" {totalCoins + currentSceneCoins}";
     }
-    public void ResetSceneCoins()
-    {
-        // Subtract current scene coins from total coins
-        totalCoins -= currentSceneCoins;
 
-        // Save updated total coins persistently
-        PlayerPrefs.SetInt("TotalCoins", totalCoins);
+    // Save coins when the level is completed
+    public void SaveCoinsOnLevelComplete()
+    {
+        totalCoins += currentSceneCoins; // Add the current scene coins to total
+        PlayerPrefs.SetInt("TotalCoins", totalCoins); // Save updated total coins
         PlayerPrefs.Save();
 
-        // Reset current scene coins
-        currentSceneCoins = 0;
+        Debug.Log("Coins saved for the level.");
+    }
 
-        Debug.Log("Coins reset to zero for the current scene.");
+    // This method resets scene-specific coins (for when retrying or starting a new scene)
+    public void ResetSceneCoins()
+    {
+        currentSceneCoins = 0;
         UpdateCountUI();
     }
-    public void RetryButton()
+    public void RetryLevel()
     {
-        ResetSceneCoins(); // Reset coins for the current scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResetSceneCoins(); // Reset the coins collected in the current level
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // Reload the current scene to retry
         Time.timeScale = 1f;
     }
-
-    //public void startlevel()
-    //{
-    //    count = 0;
-    //    count = SaveSystem.Load("Pickup", 0);
-    //    setcountText();
-    //}
-
 }

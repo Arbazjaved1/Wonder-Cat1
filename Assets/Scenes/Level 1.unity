@@ -3824,7 +3824,6 @@ MonoBehaviour:
   count: 0
   countText: {fileID: 1045508309}
   totalCoins: 0
-  currentSceneCoins: 0
 --- !u!95 &798327823
 Animator:
   serializedVersion: 5
@@ -5068,6 +5067,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7136633856986125950, guid: 66657deb04ff4b0478bc06d39b2155ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -63.19995
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 66657deb04ff4b0478bc06d39b2155ef, type: 3}
 --- !u!224 &1045508308 stripped
@@ -6128,6 +6131,7 @@ MonoBehaviour:
   - {fileID: 1727158324}
   - {fileID: 613326067}
   - {fileID: 1768068524}
+  lockPrefab: {fileID: 0}
 --- !u!114 &1360815308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6715,6 +6719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33414213abfc6241add606f15e6565e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuSceneName: MainMenu
+  finishSound: {fileID: 0}
 --- !u!61 &1433960538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10093,7 +10099,7 @@ PrefabInstance:
       objectReference: {fileID: 798327822}
     - target: {fileID: 6235790670197568877, guid: 24087c3f947b6f042991bd1761d9ad58, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RetryButton
+      value: RetryLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6235790670197568877, guid: 24087c3f947b6f042991bd1761d9ad58, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -10638,6 +10644,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 798327822}
+    - target: {fileID: 7937522584025497309, guid: 87eb82ca3944fa64b8373939072deccf, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetryLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 7937522584481524839, guid: 87eb82ca3944fa64b8373939072deccf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

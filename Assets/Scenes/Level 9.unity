@@ -504,7 +504,7 @@ PrefabInstance:
       objectReference: {fileID: 798327822}
     - target: {fileID: 6235790670197568877, guid: 24087c3f947b6f042991bd1761d9ad58, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RetryButton
+      value: RetryLevel
       objectReference: {fileID: 0}
     - target: {fileID: 6235790670197568877, guid: 24087c3f947b6f042991bd1761d9ad58, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1619,6 +1619,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33414213abfc6241add606f15e6565e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainMenuSceneName: MainMenu
+  finishSound: {fileID: 0}
 --- !u!61 &329115422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3335,7 +3337,6 @@ MonoBehaviour:
   count: 0
   countText: {fileID: 1017431905}
   totalCoins: 0
-  currentSceneCoins: 0
 --- !u!95 &798327823
 Animator:
   serializedVersion: 5
@@ -7076,7 +7077,7 @@ PrefabInstance:
       objectReference: {fileID: 798327822}
     - target: {fileID: 7937522584025497309, guid: 87eb82ca3944fa64b8373939072deccf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: RetryButton
+      value: RetryLevel
       objectReference: {fileID: 0}
     - target: {fileID: 7937522584481524839, guid: 87eb82ca3944fa64b8373939072deccf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

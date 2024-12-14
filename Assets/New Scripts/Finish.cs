@@ -1,12 +1,19 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Finish : MonoBehaviour
 {
     private bool hasTriggered = false;
+
+    [SerializeField] private string mainMenuSceneName = "MainMenu"; // Main menu scene name
+    [SerializeField] private AudioClip finishSound; // Optional finish sound
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +21,7 @@ public class Finish : MonoBehaviour
         {
             hasTriggered = true; // Ensure this is triggered only once
             UnlockNewLevel();
-            LoadNextLevel();
+            StartCoroutine(LoadNextLevel());
         }
     }
 
@@ -22,16 +29,27 @@ public class Finish : MonoBehaviour
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int reachedIndex = PlayerPrefs.GetInt("ReachedIndex", 0);
+
         if (currentSceneIndex >= reachedIndex)
         {
             PlayerPrefs.SetInt("ReachedIndex", currentSceneIndex + 1);
-            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", Mathf.Max(PlayerPrefs.GetInt("UnlockedLevel", 1), currentSceneIndex + 1));
             PlayerPrefs.Save();
         }
     }
 
-    void LoadNextLevel()
+    IEnumerator LoadNextLevel()
     {
+        // Call SaveCoinsOnLevelComplete to save coins when the level is completed
+        GameObject.FindObjectOfType<Cat>().SaveCoinsOnLevelComplete();
+
+        // Optionally play a finish sound
+        if (finishSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(finishSound);
+            yield return new WaitForSeconds(finishSound.length);
+        }
+
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
@@ -40,8 +58,7 @@ public class Finish : MonoBehaviour
         }
         else
         {
-            Debug.Log("No more levels available! Returning to main menu.");
-            SceneManager.LoadScene("MainMenu 1"); // Replace "MainMenu" with your menu scene name
+            SceneManager.LoadScene(mainMenuSceneName); // Replace with actual menu scene name
         }
     }
 }
