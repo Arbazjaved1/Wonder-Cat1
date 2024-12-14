@@ -134,8 +134,8 @@ GameObject:
   - component: {fileID: 22632424}
   - component: {fileID: 22632428}
   - component: {fileID: 22632427}
-  - component: {fileID: 22632426}
   - component: {fileID: 22632425}
+  - component: {fileID: 22632429}
   m_Layer: 0
   m_Name: Saw (6)
   m_TagString: Obstacle
@@ -172,32 +172,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &22632426
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22632423}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00054359436, y: 0.3756315}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0233727, y: 0.35542262}
-  m_EdgeRadius: 0
 --- !u!95 &22632427
 Animator:
   serializedVersion: 5
@@ -270,6 +244,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &22632429
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22632423}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.29179582
 --- !u!1 &38355181
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,8 +425,8 @@ GameObject:
   - component: {fileID: 166942752}
   - component: {fileID: 166942756}
   - component: {fileID: 166942755}
-  - component: {fileID: 166942754}
   - component: {fileID: 166942753}
+  - component: {fileID: 166942757}
   m_Layer: 0
   m_Name: Saw (5)
   m_TagString: Obstacle
@@ -473,32 +463,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &166942754
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 166942751}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0077648163, y: 0.41173863}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.970417, y: 0.38912272}
-  m_EdgeRadius: 0
 --- !u!95 &166942755
 Animator:
   serializedVersion: 5
@@ -571,6 +535,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &166942757
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 166942751}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.30057105
 --- !u!1 &177929045
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,8 +781,8 @@ GameObject:
   - component: {fileID: 208949547}
   - component: {fileID: 208949551}
   - component: {fileID: 208949550}
-  - component: {fileID: 208949549}
   - component: {fileID: 208949548}
+  - component: {fileID: 208949552}
   m_Layer: 0
   m_Name: Saw (1)
   m_TagString: Obstacle
@@ -839,32 +819,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &208949549
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 208949546}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.019670486, y: 0.44076353}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9018917, y: 0.38351595}
-  m_EdgeRadius: 0
 --- !u!95 &208949550
 Animator:
   serializedVersion: 5
@@ -937,6 +891,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &208949552
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208949546}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: -0.018108686}
+  serializedVersion: 2
+  m_Radius: 0.32527065
 --- !u!1 &226697770
 GameObject:
   m_ObjectHideFlags: 0
@@ -2109,8 +2079,8 @@ GameObject:
   - component: {fileID: 534036848}
   - component: {fileID: 534036852}
   - component: {fileID: 534036851}
-  - component: {fileID: 534036850}
   - component: {fileID: 534036849}
+  - component: {fileID: 534036853}
   m_Layer: 0
   m_Name: Saw (2)
   m_TagString: Obstacle
@@ -2147,32 +2117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &534036850
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534036847}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.00054359436, y: 0.39488864}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.94633675, y: 0.41319418}
-  m_EdgeRadius: 0
 --- !u!95 &534036851
 Animator:
   serializedVersion: 5
@@ -2245,6 +2189,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &534036853
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534036847}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.3093095
 --- !u!1001 &535757310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2670,6 +2630,7 @@ RectTransform:
   m_Children:
   - {fileID: 1045508308}
   - {fileID: 1474407062}
+  - {fileID: 7937522584123237286}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2823,8 +2784,8 @@ GameObject:
   - component: {fileID: 622569191}
   - component: {fileID: 622569195}
   - component: {fileID: 622569194}
-  - component: {fileID: 622569193}
   - component: {fileID: 622569192}
+  - component: {fileID: 622569196}
   m_Layer: 0
   m_Name: Saw (12)
   m_TagString: Obstacle
@@ -2861,32 +2822,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &622569193
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622569190}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.007762909, y: 0.40451705}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8741226, y: 0.35542297}
-  m_EdgeRadius: 0
 --- !u!95 &622569194
 Animator:
   serializedVersion: 5
@@ -2959,6 +2894,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &622569196
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622569190}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.2831587
 --- !u!1 &682850943
 GameObject:
   m_ObjectHideFlags: 0
@@ -2970,8 +2921,8 @@ GameObject:
   - component: {fileID: 682850944}
   - component: {fileID: 682850948}
   - component: {fileID: 682850947}
-  - component: {fileID: 682850946}
   - component: {fileID: 682850945}
+  - component: {fileID: 682850949}
   m_Layer: 0
   m_Name: Saw (7)
   m_TagString: Obstacle
@@ -3008,32 +2959,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &682850946
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 682850943}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0077648163, y: 0.39248145}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9993019, y: 0.3891225}
-  m_EdgeRadius: 0
 --- !u!95 &682850947
 Animator:
   serializedVersion: 5
@@ -3106,6 +3031,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &682850949
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682850943}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.313077
 --- !u!1 &692901389
 GameObject:
   m_ObjectHideFlags: 0
@@ -5110,8 +5051,8 @@ GameObject:
   - component: {fileID: 1049572729}
   - component: {fileID: 1049572733}
   - component: {fileID: 1049572732}
-  - component: {fileID: 1049572731}
   - component: {fileID: 1049572734}
+  - component: {fileID: 1049572735}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -5134,32 +5075,6 @@ Transform:
   m_Father: {fileID: 553376324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1049572731
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049572728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.002335906, y: 0.31507182}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.0209343, y: 0.41146946}
-  m_EdgeRadius: 0
 --- !u!95 &1049572732
 Animator:
   serializedVersion: 5
@@ -5246,6 +5161,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
+--- !u!58 &1049572735
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049572728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00000023841858, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.3409557
 --- !u!1 &1100678983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5368,8 +5299,8 @@ GameObject:
   - component: {fileID: 1112104319}
   - component: {fileID: 1112104323}
   - component: {fileID: 1112104322}
-  - component: {fileID: 1112104321}
   - component: {fileID: 1112104320}
+  - component: {fileID: 1112104324}
   m_Layer: 0
   m_Name: Saw (10)
   m_TagString: Obstacle
@@ -5406,32 +5337,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &1112104321
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112104318}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.072761536, y: 0.36600292}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.90782166, y: 0.3361659}
-  m_EdgeRadius: 0
 --- !u!95 &1112104322
 Animator:
   serializedVersion: 5
@@ -5504,6 +5409,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1112104324
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112104318}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.3234122
 --- !u!1001 &1161336548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5950,8 +5871,8 @@ GameObject:
   - component: {fileID: 1357367828}
   - component: {fileID: 1357367832}
   - component: {fileID: 1357367831}
-  - component: {fileID: 1357367830}
   - component: {fileID: 1357367829}
+  - component: {fileID: 1357367833}
   m_Layer: 0
   m_Name: Saw (8)
   m_TagString: Obstacle
@@ -5988,32 +5909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &1357367830
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1357367827}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.018714905, y: 0.38044572}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.9078293, y: 0.31690836}
-  m_EdgeRadius: 0
 --- !u!95 &1357367831
 Animator:
   serializedVersion: 5
@@ -6086,6 +5981,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1357367833
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357367827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.29187095
 --- !u!1 &1360815306
 GameObject:
   m_ObjectHideFlags: 0
@@ -6485,8 +6396,8 @@ GameObject:
   - component: {fileID: 1425625721}
   - component: {fileID: 1425625725}
   - component: {fileID: 1425625724}
-  - component: {fileID: 1425625723}
   - component: {fileID: 1425625722}
+  - component: {fileID: 1425625726}
   m_Layer: 0
   m_Name: Saw (3)
   m_TagString: Obstacle
@@ -6523,32 +6434,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &1425625723
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1425625720}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.033156395, y: 0.40933144}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.97522545, y: 0.35542297}
-  m_EdgeRadius: 0
 --- !u!95 &1425625724
 Animator:
   serializedVersion: 5
@@ -6621,6 +6506,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1425625726
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425625720}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.015849113}
+  serializedVersion: 2
+  m_Radius: 0.29342
 --- !u!1 &1433960534
 GameObject:
   m_ObjectHideFlags: 0
@@ -6719,8 +6620,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c33414213abfc6241add606f15e6565e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuSceneName: MainMenu
+  mainMenuSceneName: MainMenu 1
   finishSound: {fileID: 0}
+  levelCompletePanel: {fileID: 7937522584123237285}
+  gameplay: {fileID: 1045508311}
 --- !u!61 &1433960538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7570,8 +7473,8 @@ GameObject:
   - component: {fileID: 1730853985}
   - component: {fileID: 1730853989}
   - component: {fileID: 1730853988}
-  - component: {fileID: 1730853987}
   - component: {fileID: 1730853986}
+  - component: {fileID: 1730853990}
   m_Layer: 0
   m_Name: Saw (4)
   m_TagString: Obstacle
@@ -7608,32 +7511,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &1730853987
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730853984}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.023529053, y: 0.39729577}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.98485565, y: 0.35060847}
-  m_EdgeRadius: 0
 --- !u!95 &1730853988
 Animator:
   serializedVersion: 5
@@ -7706,6 +7583,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1730853990
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730853984}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.31036845
 --- !u!1 &1734302874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8374,8 +8267,8 @@ GameObject:
   - component: {fileID: 1876476774}
   - component: {fileID: 1876476778}
   - component: {fileID: 1876476777}
-  - component: {fileID: 1876476776}
   - component: {fileID: 1876476775}
+  - component: {fileID: 1876476779}
   m_Layer: 0
   m_Name: Saw (11)
   m_TagString: Obstacle
@@ -8412,32 +8305,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameplayPanel: {fileID: 1045508311}
   gameOverPanel: {fileID: 1474407061}
---- !u!61 &1876476776
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1876476773}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0042686462, y: 0.38044566}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.97522736, y: 0.3361658}
-  m_EdgeRadius: 0
 --- !u!95 &1876476777
 Animator:
   serializedVersion: 5
@@ -8510,6 +8377,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1876476779
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876476773}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.000000059604645}
+  serializedVersion: 2
+  m_Radius: 0.29204085
 --- !u!1001 &1883043989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10484,6 +10367,115 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &1033473276445011371
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 596481214}
+    m_Modifications:
+    - target: {fileID: 6949085853542455649, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257080334}
+    - target: {fileID: 6949085853856600857, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1433960537}
+    - target: {fileID: 6949085854061232547, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 257080339}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6949085854783720974, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+      propertyPath: m_Name
+      value: LevelComplete
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
 --- !u!1001 &7406300198169404764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10545,6 +10537,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be5ec5d93734e2f4b9857d16c4e7f699, type: 3}
+--- !u!1 &7937522584123237285 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6949085854783720974, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+  m_PrefabInstance: {fileID: 1033473276445011371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7937522584123237286 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6949085854783720973, guid: 4a7f8da8b9879df4b9dbaafa20fd1d6f, type: 3}
+  m_PrefabInstance: {fileID: 1033473276445011371}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7937522584509778271
 PrefabInstance:
   m_ObjectHideFlags: 0

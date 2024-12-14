@@ -6,13 +6,20 @@ public class Finish : MonoBehaviour
 {
     private bool hasTriggered = false;
 
-    [SerializeField] private string mainMenuSceneName = "MainMenu"; // Main menu scene name
+    [SerializeField] private string mainMenuSceneName = "MainMenu 1"; // Main menu scene name
     [SerializeField] private AudioClip finishSound; // Optional finish sound
+    [SerializeField] private GameObject levelCompletePanel; // Reference to the Level Complete panel
+    public GameObject gameplay;
+
     private AudioSource audioSource;
 
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        if (levelCompletePanel != null)
+        {
+            levelCompletePanel.SetActive(false); // Ensure the panel is initially hidden
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,7 +28,7 @@ public class Finish : MonoBehaviour
         {
             hasTriggered = true; // Ensure this is triggered only once
             UnlockNewLevel();
-            StartCoroutine(LoadNextLevel());
+            ShowLevelCompletePanel(); // Show the Level Complete panel
         }
     }
 
@@ -38,18 +45,26 @@ public class Finish : MonoBehaviour
         }
     }
 
-    IEnumerator LoadNextLevel()
+    void ShowLevelCompletePanel()
     {
-        // Call SaveCoinsOnLevelComplete to save coins when the level is completed
-        GameObject.FindObjectOfType<Cat>().SaveCoinsOnLevelComplete();
+        if (levelCompletePanel != null)
+        {
+            levelCompletePanel.SetActive(true); // Activate the Level Complete panel
+            gameplay.SetActive(false);
+        }
 
         // Optionally play a finish sound
         if (finishSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(finishSound);
-            yield return new WaitForSeconds(finishSound.length);
         }
 
+        // Call SaveCoinsOnLevelComplete to save coins when the level is completed
+        GameObject.FindObjectOfType<Cat>().SaveCoinsOnLevelComplete();
+    }
+
+    public void OnNextLevelButtonPressed()
+    {
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
